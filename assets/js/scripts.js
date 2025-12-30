@@ -52,3 +52,20 @@ function setActiveNav() {
 
 window.addEventListener("scroll", setActiveNav);
 window.addEventListener("load", setActiveNav);
+
+// NAV TOGGLE FOR MOBILE
+const navToggle = document.getElementById("navToggle");
+const navMenu = document.getElementById("navMenu");
+
+navToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  navToggle.classList.toggle("open");
+});
+
+// Auto-close when clicking a link
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    navToggle.classList.remove("open");
+  });
+});
