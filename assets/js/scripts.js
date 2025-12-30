@@ -69,3 +69,11 @@ navLinks.forEach(link => {
     navToggle.classList.remove("open");
   });
 });
+
+// Scroll indicator click
+const scrollArrow = document.querySelector('.scroll-down');
+if(scrollArrow) {
+  scrollArrow.addEventListener('click', () => {
+    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+  });
+}
